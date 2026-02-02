@@ -15,14 +15,22 @@ using System.Windows.Shapes;
 
 namespace WpfAppShop
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new ProductPage());
+        }
+
+        private void BtnCatalog_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ProductPage());
+        }
+
+        private void BtnCart_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new CartPage());
         }
     }
 }
